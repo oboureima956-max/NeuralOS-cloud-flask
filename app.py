@@ -8,4 +8,6 @@ def home():
 
 if __name__ == "__main__":
     print("Démarrage serveur...")
-    app.run(host="0.0.0.0", port=5000)
+    app.run(host="0.0.0.0", port=5000)@app.route("/test")
+def test():
+    return "Test réussi"
