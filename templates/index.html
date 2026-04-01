@@ -1,19 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-    <title>NeuralOS Dashboard</title>
+    <meta charset="UTF-8">
+    <title>NeuralOS Cloud</title>
+    <style>
+        body {
+            background: #0f172a;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        h1 {
+            color: #38bdf8;
+            font-size: 40px;
+        }
+
+        p {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        .box {
+            background: #1e293b;
+            padding: 30px;
+            border-radius: 10px;
+            display: inline-block;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #38bdf8;
+            border: none;
+            border-radius: 5px;
+            color: black;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0ea5e9;
+        }
+    </style>
 </head>
 <body>
-    <h1>NeuralOS Cloud</h1>
-    <p>Serveur actif ✅</p>
-</body>
-</html><!DOCTYPE html>
-<html>
-<head>
-    <title>NeuralOS</title>
-</head>
-<body>
-    <h1>NeuralOS Cloud 🚀</h1>
-    <p>Serveur actif et fonctionnel</p>
+
+    <div class="box">
+        <h1>🚀 NeuralOS Cloud</h1>
+        <p>Serveur Flask actif et fonctionnel</p>
+
+        <button onclick="test()">Tester</button>
+    </div>
+
+    <script>
+        function test() {
+            alert("NeuralOS fonctionne correctement !");
+        }
+    </script>
+
 </body>
 </html>
