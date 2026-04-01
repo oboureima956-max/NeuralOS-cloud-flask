@@ -1,10 +1,16 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, jsonify
+import random
 
 app = Flask(__name__)
 
-@app.route("/")
+@app.route('/')
 def home():
-    return render_template("index.html")
+    return render_template('index.html')
 
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000)
+@app.route('/eeg')
+def eeg():
+    data = [random.randint(0, 100) for _ in range(10)]
+    return jsonify(data)
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000)
