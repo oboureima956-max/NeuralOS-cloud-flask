@@ -1,13 +1,10 @@
- from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return "NeuralOS fonctionne !"
+    return render_template("index.html")
 
 if __name__ == "__main__":
-    print("Démarrage serveur...")
-    app.run(host="0.0.0.0", port=5000)@app.route("/test")
-def test():
-    return "Test réussi"
+    app.run(host="0.0.0.0", port=5000)
