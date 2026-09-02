@@ -30,6 +30,6 @@ jobs:
         run: |
           python -m py_compile app.py
 
-      - name: Vérifier Flask
+            - name: Vérifier Flask
         run: |
-          python -c "from app import app; print('NeuralOS Flask OK')"
+          python -c "import app; print('Fichier chargé:', app.__file__); print('Objet Flask:', app.app); print('NeuralOS Flask OK')"
